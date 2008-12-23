@@ -6,4 +6,3 @@
 source ~/etc/bash/run
 
 echo ''
-fortune startrek
