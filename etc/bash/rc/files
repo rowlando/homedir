@@ -14,4 +14,7 @@ alias   ls='ls -F'
 
 alias   mkdir='mkdir -p'
 
+alias   mv='pmv'
+alias   cp='pcp'
+
 alias   rm='rm -i'
