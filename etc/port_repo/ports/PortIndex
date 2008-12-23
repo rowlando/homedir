@@ -1,0 +1,2 @@
+p5-io-interactive 404
+variants universal variant_desc {universal {Build for multiple architectures}} portdir perl/p5-io-interactive description {Utilities for interactive I/O} homepage http://search.cpan.org/dist/IO-Interactive/ epoch 0 platforms darwin name p5-io-interactive depends_lib path:bin/perl:perl5 maintainers nomaintainer long_description {{Utilities for interactive I/O}} version 0.0.4 categories perl revision 0
