@@ -6,5 +6,5 @@
 [ -x ${HOME}/bin/textmate ]     && export VISUAL="${HOME}/bin/textmate"
 
 function pdtm {
-    perldoc -t $1 | tm
+    perldoc -t $1 | mate
 }
