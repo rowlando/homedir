@@ -4,7 +4,7 @@
 #
 # rsync options when archiving to a local disk
 
-cmd_rsync		/ports/bin/rsync
+cmd_rsync		#!/opt/local/bin/rsync
 rsync_short_args	-av
 rsync_long_args		--delete
 verbose			1

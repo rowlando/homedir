@@ -2,12 +2,12 @@
 # -*- Mode: Apache; tab-width: 3; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 
   MAILTO=norm@cackhanded.net
-    PATH=/ports/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+    PATH=#!/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 PERL5LIB=/Users/mfrancis/lib/perl
 
 #mn   hr    dom   mon   dow   cmd
 05    00    *     *     *     ${HOME}/bin/update_brain
-30    10    *     *     1     /ports/bin/port outdated
+30    10    *     *     1     #!/opt/local/bin/port outdated
 
 # backups to work external disk using rsnapshot
 # 30    10    *     *     1-5   ${HOME}/bin/rsnap pile daily
