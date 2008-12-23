@@ -1,10 +1,10 @@
-# ~/etc/bash/host/MacBook-Pro
+# ~/etc/bash/host/sinister
 # -*- Mode: Bash; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 #
-# commands specific to host MacBook-Pro
+# commands specific to host sinister
 
 [ -x ${HOME}/bin/textmate ]     && export VISUAL="${HOME}/bin/textmate"
 
 function pdtm {
-    perldoc -t $1 | mate
+    perldoc -t $1 | tm
 }

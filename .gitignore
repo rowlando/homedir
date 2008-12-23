@@ -6,8 +6,6 @@
 .ssh
 .subversion
 
-bin/mate
-
 etc/bash/saved_history
 etc/less_history
 

@@ -1,4 +1,4 @@
-#!/opt/local/bin/perl
+#!/ports/bin/perl
 
 use strict;
 use warnings;

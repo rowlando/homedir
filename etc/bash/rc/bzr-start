@@ -3,7 +3,7 @@
 #
 # create and checkout centralised bazaar repository
 
-export BZR_BASE=bzr+ssh://bzr.nascentguruism.com/bazaar/
+export BZR_BASE=bzr+ssh://bzr.cackhanded.net/bazaar/
 
 function bzr-start {    
     if [ -n "$1" ]; then

@@ -1,4 +1,4 @@
-#!/opt/local/bin/perl
+#!/ports/bin/perl
 #
 # Start or resume a GNU screen session, allowing for different configurations.
 # Run `perldoc scr` or `scr help` for documentation.
