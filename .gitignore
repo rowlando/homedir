@@ -1,8 +1,9 @@
+.com.apple.timemachine.supported
 .DS_Store
+.junglediskinstance
+.MacOSX
 .Trash
 .ssh
-.MacOSX
-.junglediskinstance
 .subversion
 
 etc/bash/saved_history
@@ -10,6 +11,7 @@ etc/less_history
 
 Applications/
 Desktop/
+Development/
 Documents/
 Downloads/
 Library/
