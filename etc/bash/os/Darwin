@@ -26,18 +26,10 @@ function eject {
 
 
 # setup things installed via MacPorts
-if [ -x /ports/bin ]; then
-       PATH="/ports/bin:${PATH}"
-    MANPATH="/ports/man:${MANPATH}"
-    daemons='/ports/etc/LaunchDaemons'
+if [ -x /opt/local/bin ]; then
+       PATH="/opt/local/bin:${PATH}"
+    MANPATH="/opt/local/man:${MANPATH}"
+    daemons='/opt/local/etc/LaunchDaemons'
     
-    source_or_warn  /ports/etc/bash_completion
-    
-    [ -x /ports/bin/nvi ]   && alias vi='nvi'
-    
-    # easier control of lighttpd
-    if [ -d /ports/etc/lighttpd ]; then
-              lighttpd="${daemons}/org.macports.lighttpd/lighttpd.wrapper"
-        alias   webctl='sudo ${lighttpd}'
-    fi
+    source_or_warn  /opt/local/etc/bash_completion
 fi
