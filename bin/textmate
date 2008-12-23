@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # 'tm' is what I rename the 'mate' command line TextMate launcher to
-~/bin/mate -w "$@"
+~/mate -w "$@"
