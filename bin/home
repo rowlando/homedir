@@ -7,13 +7,13 @@ host="${1}"
 if [ -n "${host}" ]; then
     
     # base files
-    SKELETON="${HOME}/Projects/homedir"
+    SKELETON="${HOME}/Development/Projects/homedir"
     KEYSFILE="${HOME}/.ssh/authorized_keys"
     
     # over-ride base files if a yahoo host
     is_yahoo=`echo ${host} | grep yahoo.com`
     if [ -n "${is_yahoo}" ]; then
-        SKELETON="${HOME}/Projects/homedir.yahoo"
+        SKELETON="${HOME}/Development/Projects/homedir.yahoo"
         KEYSFILE="${HOME}/.ssh/authorized_keys.yahoo"
     fi
     
