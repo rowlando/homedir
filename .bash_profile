@@ -4,5 +4,3 @@
 # every shell should be placed in the bashrc file instead
 
 source ~/etc/bash/run
-
-echo ''
