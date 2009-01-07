@@ -1,10 +1,10 @@
 # ~/etc/ports
 
-   DEV=MacBook-Pro
  STORE=PowerMac
-LAPTOP=MacBook-Pro
-    R3=MacBook-Pro
-   WEB=MacBook-Pro
+   DEV=MacBook-Pro, stevema-mac
+LAPTOP=MacBook-Pro, stevema-mac
+    R3=MacBook-Pro, stevema-mac
+   WEB=MacBook-Pro, stevema-mac
 
 
 # essentials
@@ -14,9 +14,9 @@ LAPTOP=MacBook-Pro
 *               rsync               # no-variants
 *               perl5.8             # no-variants
 *               perl5               # no-variants
-*				p5-version
+*               p5-version
 *               p5-readonly
-*				p5-io-interactive
+*               p5-io-interactive
 
 
 # shell enhancements
@@ -34,3 +34,8 @@ WEB             libxslt             # no-variants (pre-req of php5)
 WEB             bzip2               # no-variants (pre-req of php5)
 WEB             freetype            +macosx
 WEB             php5                +macosx +fastcgi +pear +sqlite
+WEB             php5-xdebug
+
+# Perl development
+DEV             p5-template-toolkit
+DEV             p5-xml-libxml

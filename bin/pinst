@@ -393,7 +393,7 @@ sub get_default_ports {
                 $hosts =~ s{$key}{$value};
             }
             
-            foreach my $host ( split /,/, $hosts ) {
+            foreach my $host ( split /,\s*/, $hosts ) {
                 if ( $hostname eq $host  or  q(*) eq $host ) {
                     push @order, $port;
                     $ports{$port}{'install'} = 1;
