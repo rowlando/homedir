@@ -11,37 +11,36 @@ LAPTOP=MacBook-Pro, stevema-mac
 *               bash-completion
 
 # basics
-*               rsync               # no-variants
-*               perl5.8             # no-variants
-*               perl5               # no-variants
-*               python25            # no-variants
-*               p5-version
-*               p5-readonly
-*               p5-io-interactive
+# *               rsync               # no-variants
+# *               perl5.8             # no-variants
+# *               perl5               # no-variants
+# *               python25            # no-variants
+# *               p5-version
+# *               p5-readonly
+# *               p5-io-interactive
 
 # shell enhancements
-*               lesspipe
-*               py-pygments
+# *               py-pygments
 
 # source control
 *               curl                # no-variants (pre-req of git-core)
 *               expat               # no-variants (pre-req of git-core)
 *               libiconv            # no-variants (pre-req of git-core)
-*               git-core
+*               git-core            +bash_completion +doc
 *               apr-util            # no-variants (pre-req of subversion)
 *               cyrus-sasl2         # no-variants (pre-req of subversion)
-*               subversion
+*               subversion          +bash_completion
 
 # web development
-WEB             libxslt             # no-variants (pre-req of php5)
-WEB             bzip2               # no-variants (pre-req of php5)
-WEB             freetype            +macosx
-WEB             php5                +macosx +fastcgi +pear +sqlite
-WEB             php5-xdebug
+# WEB             libxslt             # no-variants (pre-req of php5)
+# WEB             bzip2               # no-variants (pre-req of php5)
+# WEB             freetype            +macosx
+# WEB             php5                +macosx +fastcgi +pear +sqlite
+# WEB             php5-xdebug
 
 # Perl development
-DEV             p5-template-toolkit
-DEV             p5-xml-libxml
+# DEV             p5-template-toolkit
+# DEV             p5-xml-libxml
 
 # Python development
-DEV             py25-pil
+# DEV             py25-pil
