@@ -161,6 +161,8 @@ sub install_port {
     return if defined $installed_ports{$port};
     
     foreach my $dependency ( get_port_dependencies( $port ) ) {
+        my $tmp = $dependency;
+           $tmp =~ s/\n/\\n/;
         install_port( $dependency, $port );
     }
     
@@ -220,11 +222,13 @@ sub get_port_dependencies {
     
     LINE:
     while( my $line = <$handle> ) {
-        if ( $line =~ m{ ^ [^\s]+ \s+ has }x ) {
+        if ( ( $line =~ / ^ [^\s]+ \s+ has[ ]no /x ) 
+         || ( $line =~ / ^ Full[ ]Name: /x ) ) {
             # ignore
         }
-        elsif ( $line =~ m{ ( [^\s]+ ) }x ) {
-            push @dependencies, $1;
+        elsif ( $line =~ / ^ [^\s]+ \s+ Dependencies: \s+ ( .+ ) $/x ) {
+            my @new_deps = split /, [ ]?/x, $1;
+            push @dependencies, @new_deps;
         }
         else {
             die "Dependency error: $line";
@@ -319,7 +323,10 @@ sub get_port_variants {
     
     my $variant_regexp = qr{
         ^
-            \s+
+            (
+                \s+ |
+                (\[+\])?        # Optional symbol dealie
+            )
             ( [^\s]+ )      # capture the port
             (?:             # optional description
                 :
@@ -334,9 +341,9 @@ sub get_port_variants {
         # skip the common variants (they don't apply)
         next LINE if $line =~ m{ ^ \s+ darwin :? }x;
         next LINE if $line =~ m{ ^ \s+ universal :? }x;
-        
+        next LINE if $line =~ m{ ^ \s+ \* }x;
         if ( $line =~ $variant_regexp ) {
-            push @variants, $1;
+            push @variants, $3;
         }
         else {
             die "Variants format error: $line";
