@@ -1,0 +1,7 @@
+# ~/etc/bash/rc/python
+# -*- Mode: Bash; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+#
+# working with python
+
+# location for personal modules not properly installed
+export PYTHONPATH="${PYTHONPATH}:${HOME}/Development/Frameworks/Python/django-site-packages:${HOME}/Development/Frameworks/Python/site-packages"
