@@ -24,6 +24,12 @@ function eject {
     hdiutil eject /Volumes/$1
 }
 
+# Allow perldoc to be passed to TextMate
+[ -x ${HOME}/bin/textmate ]     && export VISUAL="${HOME}/bin/textmate"
+
+function pdtm {
+    perldoc -t $1 | mate
+}
 
 # setup things installed via MacPorts
 if [ -x /opt/local/bin ]; then
