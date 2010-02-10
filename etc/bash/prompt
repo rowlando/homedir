@@ -5,6 +5,7 @@
 
 # most basic prompt
 current_path="${pbold}\$(pwdn 2)${preset}"
+
 PS1="${hostname} ${pyellow}${current_path}${preset})\$"
 
 # optional prefixes to the basic prompt

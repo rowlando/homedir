@@ -14,10 +14,10 @@ LAPTOP=MacBook-Pro, stevema-mac
 *               rsync               # no-variants
 *               perl5.8             # no-variants
 *               perl5               # no-variants
+*               python25            # no-variants
 *               p5-version
 *               p5-readonly
 *               p5-io-interactive
-
 
 # shell enhancements
 *               lesspipe
@@ -28,6 +28,9 @@ LAPTOP=MacBook-Pro, stevema-mac
 *               expat               # no-variants (pre-req of git-core)
 *               libiconv            # no-variants (pre-req of git-core)
 *               git-core
+*               apr-util            # no-variants (pre-req of subversion)
+*               cyrus-sasl2         # no-variants (pre-req of subversion)
+*               subversion
 
 # web development
 WEB             libxslt             # no-variants (pre-req of php5)
@@ -39,3 +42,6 @@ WEB             php5-xdebug
 # Perl development
 DEV             p5-template-toolkit
 DEV             p5-xml-libxml
+
+# Python development
+DEV             py25-pil
