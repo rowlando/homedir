@@ -6,5 +6,5 @@ perl5.setup        IO-Interactive 0.0.6
 maintainers        nomaintainer
 description        Utilities for interactive I/O
 long_description    ${description}
-checksums        md5 408bfc1bfd0d13ce73099cdc716b6b90
+checksums        md5 6ca9b8b8afc8b7d5e85985ea864d2431
 platforms        darwin
