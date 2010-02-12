@@ -2,7 +2,7 @@
 PortSystem 1.0
 PortGroup perl5 1.0
 
-perl5.setup        IO-Interactive 0.0.4
+perl5.setup        IO-Interactive 0.0.6
 maintainers        nomaintainer
 description        Utilities for interactive I/O
 long_description    ${description}
