@@ -16,3 +16,6 @@
 *               apr-util            # no-variants (pre-req of subversion)
 *               cyrus-sasl2         # no-variants (pre-req of subversion)
 *               subversion          +bash_completion
+
+# ~/bin prereqs
+*               p5-readonly         # (pre-req of `pcp` and `pmv`, etc.)
