@@ -1,0 +1,10 @@
+# crontab.XXX
+# -*- Mode: Apache; tab-width: 3; indent-tabs-mode: nil -*-
+ 
+  MAILTO=norm@cackhanded.net
+    PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+    HOST=XXX
+ 
+#mn   hr    dom   mon   dow   cmd
+# -- added automatically Mon 1 Mar 2010 19:40:07 GMT
+00 12 * * 1 checksoftwareupdate
