@@ -1,2 +1,6 @@
-p5-io-interactive 404
-variants universal variant_desc {universal {Build for multiple architectures}} portdir perl/p5-io-interactive description {Utilities for interactive I/O} homepage http://search.cpan.org/dist/IO-Interactive/ epoch 0 platforms darwin name p5-io-interactive depends_lib path:bin/perl:perl5 maintainers nomaintainer long_description {{Utilities for interactive I/O}} version 0.0.6 categories perl revision 0
+p5-io-all 304
+portdir perl/p5-io-all description {A proxy for numerous IO objects} homepage http://search.cpan.org/dist/IO-All/ epoch 0 platforms darwin name p5-io-all depends_lib path:bin/perl:perl5 maintainers nomaintainer long_description {{A proxy for numerous IO objects}} categories perl version 0.39 revision 0
+p5-io-interactive 325
+portdir perl/p5-io-interactive description {Utilities for interactive I/O} homepage http://search.cpan.org/dist/IO-Interactive/ epoch 0 platforms darwin name p5-io-interactive depends_lib path:bin/perl:perl5 maintainers nomaintainer long_description {{Utilities for interactive I/O}} categories perl version 0.0.6 revision 0
+p5-www-curl 320
+portdir perl/p5-www-curl description {Perl extension interface for libcurl} homepage http://search.cpan.org/dist/WWW-Curl/ epoch 0 platforms darwin name p5-www-curl depends_lib path:bin/perl:perl5 maintainers nomaintainer long_description {{Perl extension interface for libcurl}} categories perl version 4.11 revision 0
