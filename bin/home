@@ -3,6 +3,7 @@
 # copy home directory files to the named machine
 
 host="${1}"
+is_yahoo="${2}"
 
 if [ -n "${host}" ]; then
     
@@ -11,7 +12,9 @@ if [ -n "${host}" ]; then
     KEYSFILE="${HOME}/.ssh/authorized_keys"
     
     # over-ride base files if a yahoo host
-    is_yahoo=`echo ${host} | grep yahoo.com`
+    if [ -z "${is_yahoo}" ]; then
+        is_yahoo=`echo ${host} | grep yahoo.com`
+    fi
     if [ -n "${is_yahoo}" ]; then
         SKELETON="${HOME}/Development/Projects/homedir.yahoo"
         KEYSFILE="${HOME}/.ssh/authorized_keys.yahoo"
