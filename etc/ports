@@ -1,7 +1,8 @@
 # ~/etc/ports
 
- STORE=PowerMac
-   DEV=rockboard-lm
+STORE=PowerMac
+  DEV=rockboard-lm
+MEDIA=PowerMac
 
 
 # essentials
@@ -12,10 +13,10 @@
 *               curl                # no-variants (pre-req of git-core)
 *               libiconv            # no-variants (pre-req of git-core)
 *               git-core            +bash_completion
-*               db46                # no-variants (pre-req of subversion)
-*               apr-util            # no-variants (pre-req of subversion)
-*               cyrus-sasl2         # no-variants (pre-req of subversion)
-*               subversion          +bash_completion
+DEV             db46                # no-variants (pre-req of subversion)
+DEV             apr-util            # no-variants (pre-req of subversion)
+DEV             cyrus-sasl2         # no-variants (pre-req of subversion)
+DEV             subversion          +bash_completion
 
 # ~/bin prereqs
 *               p5-readonly         # (pre-req of `pcp` and `pmv`, etc.)
