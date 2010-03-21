@@ -18,6 +18,10 @@ if [ -n "${host}" ]; then
     if [ -n "${is_yahoo}" ]; then
         SKELETON="${HOME}/Development/Projects/homedir.yahoo"
         KEYSFILE="${HOME}/.ssh/authorized_keys.yahoo"
+        DSAFILE="${HOME}/.ssh/id_dsa.yahoo"
+        DSAPFILE="${HOME}/.ssh/id_dsa.yahoo.pub"
+        RSAFILE="${HOME}/.ssh/id_rsa.yahoo"
+        RSAPFILE="${HOME}/.ssh/id_rsa.yahoo.pub"
     fi
     
     # make sure the skeleton is up-to-date
@@ -27,6 +31,12 @@ if [ -n "${host}" ]; then
     # first transfer the keys file
     ssh ${host} "mkdir -p .ssh"
     rsync -v ${KEYSFILE} ${host}:.ssh/authorized_keys
+    if [ -n "${DSAFILE}" ]; then
+        rsync -v ${DSAFILE} ${host}:.ssh/id_dsa
+        rsync -v ${DSAPFILE} ${host}:.ssh/id_dsa.pub
+        rsync -v ${RSAFILE} ${host}:.ssh/id_rsa
+        rsync -v ${RSAPFILE} ${host}:.ssh/id_rsa.pub
+    fi
     
     # then copy everything else (this has the side effect
     # of illustrating whether ssh now works passwordless)
