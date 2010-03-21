@@ -22,3 +22,4 @@ DEV             subversion          +bash_completion
 *               p5-readonly         # (pre-req of `pcp` and `pmv`, etc.)
 *               p5-io-interactive   # (pre-req of `pcp` and `pmv`, etc.)
 *               p5-version          # (pre-req of `pcp` and `pmv`, etc.)
+
