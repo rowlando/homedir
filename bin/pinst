@@ -222,7 +222,7 @@ sub get_port_dependencies {
     
     LINE:
     while( my $line = <$handle> ) {
-        if ( ( $line =~ / ^ [^\s]+ \s+ has[ ]no /x ) 
+        if ( ( $line =~ / ^ [^\s]+ (\s+ @[^\s]+)?  \s+ has[ ]no /x ) 
          || ( $line =~ / ^ Full[ ]Name: /x ) ) {
             # ignore
         }

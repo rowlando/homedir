@@ -9,9 +9,8 @@ current_path="${pbold}\$(pwdn 2)${preset}"
 PS1="${hostname} ${pyellow}${current_path}${preset})\$"
 
 # optional prefixes to the basic prompt
-[ $USER != 'stevema' ]         && PS1="${USER}@${PS1}"
+[ $USER != 'stevema' ]      && PS1="${USER}@${PS1}"
 [ -n "$prompt_prefix" ]     && PS1="${prompt_prefix} ${PS1}"
 [ -n "$WINDOW" ]            && PS1="${pcyan}scr-${WINDOW}${preset} ${PS1}"
 
 PS1="($PS1 "
-
