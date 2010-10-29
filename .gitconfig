@@ -15,6 +15,6 @@
 	ci = commit
 	co = checkout
 	d  = diff
-	s  = status
+	st = status
 [core]
 	excludesfile = /Users/stevema/.gitignore
