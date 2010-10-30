@@ -17,4 +17,4 @@
 	d  = diff
 	st = status
 [core]
-	excludesfile = /Users/stevema/etc/git/ignore
+	excludesfile = ~/etc/git/ignore
