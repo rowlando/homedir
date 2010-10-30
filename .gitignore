@@ -1,10 +1,5 @@
 .com.apple.timemachine.supported
-.DS_Store
-.junglediskinstance
-.MacOSX
-.Trash
 .ssh
-.subversion
 
 bin/mate
 
@@ -18,7 +13,7 @@ Documents/
 Downloads/
 Encoding/
 Library/
-Media/
+/Users/stevema/Media/
 Movies/
 Music/
 Pictures/
