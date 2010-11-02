@@ -1,0 +1,25 @@
+STORE=PowerMac
+  DEV=rockboard-lm
+MEDIA=PowerMac
+
+
+MEDIA           Config::Std
+MEDIA           Data::Dumper::Concise
+MEDIA           IMDB::Film
+MEDIA           IO::All
+MEDIA           IO::CaptureOutput
+DEV           IPC::DirQueue
+DEV           LWP::UserAgent
+DEV           Modern::Perl
+DEV           Moose
+DEV           MooseX::FollowPBP
+DEV           MooseX::Method::Signatures
+DEV           Readonly
+DEV           Storable
+DEV           Term::ReadKey
+DEV           Test::More
+DEV           Text::Aspell
+DEV           Text::Iconv
+DEV           Time::Elapsed
+DEV           TryCatch
+DEV           version

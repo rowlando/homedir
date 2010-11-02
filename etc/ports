@@ -24,3 +24,6 @@ DEV             mercurial           +bash_completion
 
 # Useful libs
 # DEV             p5-http-lite        # Simple HTTP access
+
+# p5-Media prereqs
+MEDIA           aspell              # no-variants (pre-req for Text::Aspell)
