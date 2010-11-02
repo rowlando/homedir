@@ -2,24 +2,24 @@ STORE=PowerMac
   DEV=rockboard-lm
 MEDIA=PowerMac
 
-
+# p5-Media deps
 MEDIA           Config::Std
 MEDIA           Data::Dumper::Concise
 MEDIA           IMDB::Film
 MEDIA           IO::All
 MEDIA           IO::CaptureOutput
-DEV           IPC::DirQueue
-DEV           LWP::UserAgent
-DEV           Modern::Perl
-DEV           Moose
-DEV           MooseX::FollowPBP
-DEV           MooseX::Method::Signatures
-DEV           Readonly
-DEV           Storable
-DEV           Term::ReadKey
-DEV           Test::More
-DEV           Text::Aspell
-DEV           Text::Iconv
-DEV           Time::Elapsed
-DEV           TryCatch
-DEV           version
+MEDIA           IPC::DirQueue
+MEDIA           LWP::UserAgent
+MEDIA           Modern::Perl
+MEDIA           Moose
+MEDIA           MooseX::FollowPBP
+MEDIA           MooseX::Method::Signatures
+MEDIA           Readonly
+MEDIA           Storable
+MEDIA           Term::ReadKey
+MEDIA           Test::More
+MEDIA           Text::Aspell
+MEDIA           Text::Iconv
+MEDIA           Time::Elapsed
+MEDIA           TryCatch
+MEDIA           version

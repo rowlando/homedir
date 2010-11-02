@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 # -*- Mode: Perl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 
 use strict;
