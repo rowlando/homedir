@@ -1,10 +1,21 @@
+.CFUserTextEncoding
 .com.apple.timemachine.supported
+.cpan*
+.dvdcss
+.macports
+
 .ssh
 
+bin/atomic-parsley
+bin/AtomicParsley*
 bin/mate
+bin/HandBrakeCLI
+bin/SublerCLI
 
 etc/bash/saved_history
 etc/less_history
+
+var/encoder.pid
 
 Applications/
 Desktop/
