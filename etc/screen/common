@@ -11,7 +11,7 @@ escape              ^Zz
 autodetach          on
 defutf8             on
 nonblock            on
-defscrollback       1024
+defscrollback       5120
 startup_message     off
 
 # always alert to activity

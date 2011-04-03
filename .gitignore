@@ -3,6 +3,7 @@
 .cpan*
 .dvdcss
 .macports
+.lesshst
 
 .ssh
 
