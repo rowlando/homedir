@@ -1,0 +1,16 @@
+# ~/etc/ports
+
+STORE=PowerMac, iMac
+  DEV=rockboard-lm
+MEDIA=PowerMac, iMac
+
+
+# essentials
+*               bash-completion
+*               git
+
+# source control
+DEV             subversion          +bash_completion
+
+# p5-Media prereqs
+MEDIA           aspell              --lang=en
