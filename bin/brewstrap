@@ -16,7 +16,7 @@ my $hostname           = defined $ENV{'HOST'}
    $hostname          =~ s/\..*//;
 
 my  $BOOTSTRAP_URL     = 'https://raw.github.com/gist/323731/39fc1416e34b9f6db201b4a026181f4ceb7cfa74';
-my  $BOOTSTRAP_CMD     = qq(ruby -e "$$(curl -fsSL ${BOOTSTRAP_URL})");
+my  $BOOTSTRAP_CMD     = qq(ruby -e "\$\(curl -fsSL ${BOOTSTRAP_URL}\)");
 
 my $BREW               = '/usr/local/bin/brew';
 my $INSTALL_CMD        = "${BREW} install";
