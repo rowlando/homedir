@@ -16,15 +16,15 @@ my $hostname           = defined $ENV{'HOST'}
    $hostname          =~ s/\..*//;
 
 my  $BOOTSTRAP_URL     = 'https://raw.github.com/gist/323731/39fc1416e34b9f6db201b4a026181f4ceb7cfa74';
-my  $BOOTSTRAP_CMD     = qq(ruby -e "$(curl -fsSL ${BOOTSTRAP_URL})");
+my  $BOOTSTRAP_CMD     = qq(ruby -e "$$(curl -fsSL ${BOOTSTRAP_URL})");
 
 my $BREW               = '/usr/local/bin/brew';
 my $INSTALL_CMD        = "${BREW} install";
 my $INSTALLED_CMD      = "${BREW} list";
 
 unless ( -e $BREW ) {
-    print colored "cpanm is required for us to install with…\n", "bold yellow";
-    print colored "About to install cpanm:\n", "bold yellow";
+    print colored "homebrew is required for us to install with…\n", "bold yellow";
+    print colored "About to install homebrew:\n", "bold yellow";
     system( $BOOTSTRAP_CMD );
 }
 
@@ -36,9 +36,6 @@ my  @needed_modules    = get_needed_modules( @desired_modules );
 print Dumper(@needed_modules);
 if( @needed_modules ) {
     install_modules( @needed_modules );
-}
-else {
-    print 'hi there';
 }
 
 sub get_installed_modules {
