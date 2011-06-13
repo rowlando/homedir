@@ -41,7 +41,7 @@ if [ -x /opt/local/bin ]; then
 fi
 
 # setup things installed via homebrew
-if [ -x `brew --prefix` ]; then
+if [ -f /usr/local/bin/brew ]; then
     if [ -f `brew --prefix`/etc/bash_completion ]; then
       . `brew --prefix`/etc/bash_completion
     fi
