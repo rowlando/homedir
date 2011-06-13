@@ -33,7 +33,6 @@ my( $default_modules_hash,
     @default_modules ) = get_default_modules();
 my  @desired_modules   = get_desired_modules( @default_modules );
 my  @needed_modules    = get_needed_modules( @desired_modules );
-print Dumper(@needed_modules);
 if( @needed_modules ) {
     install_modules( @needed_modules );
 }
