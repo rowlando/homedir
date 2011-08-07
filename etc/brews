@@ -1,7 +1,7 @@
 # ~/etc/ports
 
   DEV=rockboard-lm
-MEDIA=PowerMac, Steves-iMac
+MEDIA=PowerMac, Steves-iMac, rockboard-lm
 
 
 # essentials
@@ -18,3 +18,9 @@ DEV             subversion          +bash_completion
 MEDIA           atomicparsley
 MEDIA           aspell              --lang=en
 MEDIA           handbrake
+
+# Media-OCR stuff
+MEDIA           dvdauthor           # Allows unmuxing of subs from DVDs
+MEDIA           imagemagick         # Allows conversion of images for OCRing
+MEDIA           gocr                # OCR library
+MEDIA           tesseract           # OCR library
