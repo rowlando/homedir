@@ -1,12 +1,13 @@
 # ~/etc/ports
 
-  DEV=rockboard-lm
-MEDIA=PowerMac, Steves-iMac, rockboard-lm
+    DEV=rockboard-lm
+PRELION=rockboard-lm
+  MEDIA=PowerMac, Steves-iMac, rockboard-lm
 
 
 # essentials
 *               bash-completion
-*               git
+PRELION         git
 *               perl
 # NOTE: cpanminus doesn't actually rely on our perl
 *               cpanminus
