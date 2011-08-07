@@ -6,25 +6,25 @@ MEDIA=PowerMac
 
 
 # essentials
-*               bash-completion
+# *               bash-completion
 *               perl5.10            # no-variants (pre-req of perl5)
 *               perl5               +perl5_10
-*               python_select       # Used to set python26 as default
-*               db46                +no_java # (pre-req of python26)
-*               python26
-
-# source control
-*               curl                # no-variants (pre-req of git-core)
-# HACK: Require db46+no_java because no-variants appears to be broken
-DEV             apr-util            # no-variants (pre-req of subversion)
-DEV             cyrus-sasl2         # no-variants (pre-req of subversion)
-*               git-core            +bash_completion
-DEV             subversion          +bash_completion
-DEV             mercurial           +bash_completion
-
-# Useful libs
-# DEV             p5-http-lite      # Simple HTTP access
-
-# p5-Media prereqs
-MEDIA           aspell-dict-en      # no-variants (pre-req for Text::Aspell)
-MEDIA           aspell              # no-variants (pre-req for Text::Aspell)
+# *               python_select       # Used to set python26 as default
+# *               db46                +no_java # (pre-req of python26)
+# *               python26
+# 
+# # source control
+# *               curl                # no-variants (pre-req of git-core)
+# # HACK: Require db46+no_java because no-variants appears to be broken
+# DEV             apr-util            # no-variants (pre-req of subversion)
+# DEV             cyrus-sasl2         # no-variants (pre-req of subversion)
+# *               git-core            +bash_completion
+# DEV             subversion          +bash_completion
+# DEV             mercurial           +bash_completion
+# 
+# # Useful libs
+# # DEV             p5-http-lite      # Simple HTTP access
+# 
+# # p5-Media prereqs
+# MEDIA           aspell-dict-en      # no-variants (pre-req for Text::Aspell)
+# MEDIA           aspell              # no-variants (pre-req for Text::Aspell)
