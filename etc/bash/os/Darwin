@@ -36,6 +36,7 @@ if [ -x /opt/local/bin ]; then
        PATH="/opt/local/bin:${PATH}"
     MANPATH="/opt/local/man:${MANPATH}"
     daemons='/opt/local/etc/LaunchDaemons'
+    
     if [ -f /opt/local/etc/bash_completion ]; then
         source_or_warn  /opt/local/etc/bash_completion
     fi
