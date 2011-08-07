@@ -3,23 +3,19 @@ STORE=PowerMac
 MEDIA=PowerMac
 
 # p5-Media deps
+MEDIA           Capture::Tiny
 MEDIA           Config::Std
 MEDIA           Data::Dumper::Concise
+MEDIA           HTTP::Lite
 MEDIA           IMDB::Film
 MEDIA           IO::All
-MEDIA           IO::CaptureOutput
 MEDIA           IPC::DirQueue
-MEDIA           LWP::UserAgent
 MEDIA           Modern::Perl
-MEDIA           Moose
-MEDIA           MooseX::FollowPBP
-MEDIA           MooseX::Method::Signatures
-MEDIA           Readonly
-MEDIA           Storable
+MEDIA           MooseX::Declare
+MEDIA           Net::Discident
+MEDIA           String::Approx
 MEDIA           Term::ReadKey
-MEDIA           Test::More
 MEDIA           Text::Aspell
 MEDIA           Text::Iconv
 MEDIA           Time::Elapsed
-MEDIA           TryCatch
-MEDIA           version
+MEDIA           WebService::MusicBrainz
