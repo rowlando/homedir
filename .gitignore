@@ -1,6 +1,7 @@
 .CFUserTextEncoding
 .com.apple.timemachine.supported
 .cpan*
+.cups
 .dvdcss
 .macports
 .lesshst
