@@ -1,8 +1,8 @@
 # ~/etc/ports
 
-STORE=PowerMac
+STORE=PowerMac,Steves-iMac
   DEV=rockboard-lm
-MEDIA=PowerMac
+MEDIA=PowerMac,Steves-iMac
 
 
 # essentials
