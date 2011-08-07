@@ -1,6 +1,5 @@
 # ~/etc/ports
 
-STORE=PowerMac, Steves-iMac
   DEV=rockboard-lm
 MEDIA=PowerMac, Steves-iMac
 
@@ -8,6 +7,9 @@ MEDIA=PowerMac, Steves-iMac
 # essentials
 *               bash-completion
 *               git
+*               perl
+# NOTE: cpanminus doesn't actually rely on our perl
+*               cpanminus
 
 # source control
 DEV             subversion          +bash_completion
