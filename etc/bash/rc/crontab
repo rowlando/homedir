@@ -3,9 +3,11 @@
 #
 # keep the master copy of the crontab file in ~/var, not /var
 
-export REAL_CRONTAB=`which crontab`
-export CRONTAB_FILE=${HOME}/var/cron/${HOST}
-export BASE_CRONTAB="${HOME}/var/cron/_default"
+if [[ $HOSTOS != CYGWIN* ]]; then
+    export REAL_CRONTAB=`which crontab`
+    export CRONTAB_FILE=${HOME}/var/cron/${HOST}
+    export BASE_CRONTAB="${HOME}/var/cron/_default"
+fi
 
 function init_crontab {
     # initialise it if necessary

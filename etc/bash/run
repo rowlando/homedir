@@ -5,7 +5,11 @@
 
 # useful flags
   hostos=`uname`
-hostname=`hostname -s`
+if [[ $hostos == CYGWIN* ]] ; then
+    hostname=`hostname`
+else
+    hostname=`hostname -s`
+fi
 
 export  HOSTOS="${hostos}"
 export    HOST="${hostname}"
