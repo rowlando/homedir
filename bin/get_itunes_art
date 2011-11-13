@@ -1,0 +1,90 @@
+#!/usr/bin/env perl
+
+use warnings;
+use strict;
+
+use Getopt::Std;
+use URI::Escape;
+use XML::XPath;
+
+# TODO: Verbose output
+
+sub usage {
+    print <<USAGE;
+get_itunes_art [-hv] [-x xmlfile] artist album
+    -h           : this (help) message
+    -x xmlfile   : Output the iTunes cover art match plist to `xmlfile`
+
+example: get_itunes_art -v -x iTunes.xml "Foo Fighters" "Wasting Light"
+USAGE
+    exit;
+}
+
+my %opt;
+getopts('hx:', \%opt) or usage();
+my $num_args = $#ARGV + 1;
+usage() if $opt{h} or ($num_args < 2);
+
+# print $ARGV[1], "\n";
+my $artist = uri_escape( $ARGV[0] );
+my $album  = uri_escape( $ARGV[1] );
+my $output = $ARGV[1];
+
+# TODO: Param-based storefront selection
+# TODO: Support storefront IDs per http://images.apple.com/itunesaffiliates/US/2009/Document/LinktoiTune.pdf
+my $storefront = 143444;
+
+# TODO: Programatically work out the URL
+# TODO: Support verbose mode
+my $url = "http://itunes.apple.com/WebObjects/MZStoreServices.woa/wa/coverArtMatch?s=${storefront}&pn=${album}&an=${artist}";
+
+use LWP::UserAgent;
+my $browser = LWP::UserAgent->new;
+# Pretend to be iTunes so we get back the plist instead of HTML
+# TODO: Spoof current iTunes UA? Where?
+# TODO: Handle 'upgrade iTunes' messages gracefully
+   $browser->agent('iTunes/10.4.1 (Macintosh; Intel Mac OS X 10.7.1) AppleWebKit/534.48.3');
+   
+
+# Get the data
+my $result  = $browser->get( $url );
+if ($result->is_success) {
+    my $content = $result->content;
+    
+    # Output the XML file, if requested
+    if ( $opt{x} ) {
+        my $xml_file = $opt{x};
+        open( XML, ">${xml_file}");
+        print XML $content;
+        close( XML );
+    }
+    
+    # Find <key>cover-art-url</key><string>[GOODNESS TO GRAB]</string>
+    # in the returned plist
+    # TODO: Do this without XPath?
+    my $xpath   = XML::XPath->new(xml => $content);
+    my $img_url = $xpath->getNodeText(
+        q(//key[contains(.,'cover-art-url')]/following-sibling::string[1])
+    );
+    
+    # Strip the crap from the end of the image URL
+    $img_url =~ s/\.enc\.jpg\?.*$//;
+    
+    # Only request the image if we have a URL
+    # TODO: More robuse is-URL checks?
+    if ( $img_url =~ qr(^http://) ) {
+        # Try to get a version of the image
+        my @img_formats = qw( jpg tif );
+        foreach my $format ( @img_formats ) {
+            # print "${img_url}.${format}\n";
+            my $img_result  = $browser->get( "${img_url}.${format}" );
+            # If this image format works, write it to disk and drop out of the loop
+            if ($img_result->is_success) {
+                open( IMG, ">${output}.${format}" );
+                print IMG $img_result->content;
+                close( IMG );
+                last;
+            }
+        }
+    }
+}
