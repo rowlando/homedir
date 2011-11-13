@@ -4,7 +4,9 @@
 # working with perl
 
 # location for personal modules not properly installed
-export PERL5LIB="${HOME}/lib/perl"
+PERL_LOCAL_LIB="${HOME}/Library/Perl"
+export PERL5LIB="${PERL_LOCAL_LIB}/lib/perl5:${HOME}/lib/perl"
+export PERL_CPANM_OPT="--local-lib ${PERL_LOCAL_LIB}"
 
 unixdate='print UnixDate( shift, "%s\n" );'
 

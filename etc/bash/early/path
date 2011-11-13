@@ -3,9 +3,7 @@
 #
 # common updates to the default path
 
-[ -x /usr/local/Cellar/perl/5.14.1/bin ] && PATH="/usr/local/Cellar/perl/5.14.1/bin:${PATH}"
-
-[ -x /usr/local/bin ]       && PATH="/usr/local/bin:${PATH}"
-[ -x /usr/local/sbin ]      && PATH="/usr/local/sbin:${PATH}"
-[ -x ${HOME}/bin ]         && PATH="${HOME}/bin:${PATH}"
-
+[ -x /usr/local/bin ]           && PATH="/usr/local/bin:${PATH}"
+[ -x /usr/local/sbin ]          && PATH="/usr/local/sbin:${PATH}"
+[ -x ${HOME}/bin ]              && PATH="${HOME}/bin:${PATH}"
+[ -x ${HOME}/Library/Perl/bin ] && PATH="${HOME}/Library/Perl/bin:${PATH}"
