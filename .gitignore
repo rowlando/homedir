@@ -9,11 +9,7 @@
 
 .ssh
 
-bin/atomic-parsley
-bin/AtomicParsley*
 bin/mate
-bin/HandBrakeCLI
-bin/SublerCLI
 
 etc/bash/saved_history
 etc/less_history
@@ -25,6 +21,8 @@ Desktop/
 Development/
 Documents/
 Downloads/
+.dropbox/
+Dropbox/
 Encoding/
 Library/
 Media/
