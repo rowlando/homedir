@@ -3,4 +3,8 @@
 # 
 # screenrc config
 
-export SCREENRC=~/etc/screen/default
+if [ -f ~/etc/screen/$hostname ]; then
+    export SCREENRC=~/etc/screen/$hostname
+else
+    export SCREENRC=~/etc/screen/default
+fi
