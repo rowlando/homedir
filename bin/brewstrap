@@ -34,7 +34,12 @@ my( $default_modules_hash,
 my  @desired_modules   = get_desired_modules( @default_modules );
 my  @needed_modules    = get_needed_modules( @desired_modules );
 if( @needed_modules ) {
-    install_modules( @needed_modules );
+    my $modules_to_install = ();
+    foreach my $module ( @needed_modules ) {
+        $modules_to_install->{$module} = $default_modules_hash->{$module};
+    }
+
+    install_modules( $modules_to_install );
 }
 
 sub get_installed_modules {
@@ -72,11 +77,26 @@ sub get_needed_modules {
 }
 
 sub install_modules {
-    my @needed_modules = @_;
-    my $command        = join( ' ', $INSTALL_CMD, @needed_modules );
+    my $needed_modules = shift;
+
+    my @final_batch    = ();
+
+    # Install items with flags on their own
+    while ( my ($name, $module) = each( %$needed_modules ) ) {
+        if ( $module->{'flags'} ) {
+	    my $command = join( ' ', $INSTALL_CMD, $name, $module->{'flags'} );
+	    system( $command );
+	}
+	else {
+	    push( @final_batch, $name );
+	}
+    }
     
-    # print "${command}\n";
-    system( $command );
+    # Install all non-flag modules
+    if ( 0 != scalar( @final_batch ) ) {
+        my $command        = join( ' ', $INSTALL_CMD, @final_batch );
+        system( $command );
+    }
 }
 
 sub get_default_modules {
@@ -117,9 +137,9 @@ sub get_default_modules {
             $assignments{$1} = $2;
         }
         elsif ( $line =~ $module_regexp ) {
-            my $hosts    = $1;
-            my $module     = $2;
-            my $variants = $3 || q();
+            my $hosts  = $1;
+            my $module = $2;
+            my $flags  = $3 || q();
             
             # replace assignments
             foreach my $key ( keys %assignments ) {
@@ -131,10 +151,9 @@ sub get_default_modules {
                 if ( $hostname eq $host  or  q(*) eq $host ) {
                     push @order, $module;
                     $modules{$module}{'install'} = 1;
-
-                    foreach my $var ( split /\s+/, $variants ) {
-                        $modules{$module}{'variants'}{$var} = 1;
-                    }
+		    if ( '' ne $flags ) {
+                        $modules{$module}{'flags'}   = $flags;
+		    }
                 }
             }
         }

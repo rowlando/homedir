@@ -1,15 +1,11 @@
 # ~/etc/ports
 
-    DEV=rockboard-lm
-PRELION=rockboard-lm
-  MEDIA=PowerMac, Steves-iMac, rockboard-lm
+    DEV=
+  MEDIA=Steves-iMac
 
 
 # essentials
 *               bash-completion
-PRELION         git
-*               perl
-# NOTE: cpanminus doesn't actually rely on our perl
 *               cpanminus
 
 # source control
@@ -18,10 +14,12 @@ DEV             subversion          +bash_completion
 # p5-Media prereqs
 MEDIA           atomicparsley
 MEDIA           aspell              --lang=en
-MEDIA           handbrake
+# MEDIA           handbrake
 
 # Media-OCR stuff
-MEDIA           dvdauthor           # Allows unmuxing of subs from DVDs
-MEDIA           imagemagick         # Allows conversion of images for OCRing
-MEDIA           gocr                # OCR library
-MEDIA           tesseract           # OCR library
+# MEDIA           dvdauthor           # Allows unmuxing of subs from DVDs
+# MEDIA           imagemagick         # Allows conversion of images for OCRing
+# MEDIA           gocr                # OCR library
+# MEDIA           tesseract           # OCR library
+# MEDIA           transcode           # Tools for dicking around with DVDs!
+# MEDIA           subtitleripper      # Does exactly what is says
