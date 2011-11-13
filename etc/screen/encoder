@@ -1,0 +1,8 @@
+# ~/etc/screen/encoder
+
+source common
+
+chdir  /Users/Steven/Encoding/
+screen -t encoder 0 encoder
+screen -t queue   1 botch -n 60 -c 'queue list | head -50'
+screen -t shell   2

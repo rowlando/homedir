@@ -1,8 +1,0 @@
-# ~/etc/screen/PowerMac
-
-source common
-
-chdir  /Users/Steven/Encoding/
-screen -t encoder 0 /opt/local/bin/encoder run
-screen -t queue   1 /opt/local/bin/watch -n 60 -t 'encoder queue | head -50'
-screen -t shell   2
