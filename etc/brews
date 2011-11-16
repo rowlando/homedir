@@ -8,9 +8,6 @@
 *               bash-completion
 *               cpanminus
 
-# source control
-DEV             subversion          +bash_completion
-
 # p5-Media prereqs
 MEDIA           atomicparsley
 MEDIA           aspell              --lang=en

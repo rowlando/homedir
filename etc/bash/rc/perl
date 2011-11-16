@@ -8,7 +8,9 @@ PERL_LOCAL_LIB="${HOME}/Library/Perl"
 export PERL5LIB="${PERL_LOCAL_LIB}/lib/perl5:${HOME}/lib/perl"
 export PERL_CPANM_OPT="--local-lib ${PERL_LOCAL_LIB}"
 
+[ -x ${PERL_LOCAL_LIB}/bin ] && PATH="${PERL_LOCAL_LIB}/bin:${PATH}"
+
 unixdate='print UnixDate( shift, "%s\n" );'
 
 alias   stamp="perl -MDate::Manip -e '${unixdate}'"
-alias      pm='perl Makefile.PL ; make ; make test'
+alias   pmake='perl Makefile.PL ; make ; make test'

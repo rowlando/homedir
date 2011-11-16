@@ -9,6 +9,9 @@
 
 .ssh
 
+.gem
+.vagrant
+
 bin/mate
 
 etc/bash/saved_history

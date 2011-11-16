@@ -1,0 +1,10 @@
+# ~/etc/bash/rc/ruby
+# -*- Mode: Bash; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+#
+# working with ruby
+
+# location for personal modules not properly installed
+RUBY_LOCAL_LIB="${HOME}/Library/Ruby"
+export GEM_HOME="${RUBY_LOCAL_LIB}"
+
+[ -x ${RUBY_LOCAL_LIB}/bin ] && PATH="${RUBY_LOCAL_LIB}/bin:${PATH}"
