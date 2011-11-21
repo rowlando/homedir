@@ -4,3 +4,7 @@
 # miscellaneous settings
 
 export     VISUAL='vi'
+[ -x ${HOME}/bin/mate ]              && VISUAL="mate -w"
+
+export     EDITOR='vi'
+[ -x ${HOME}/bin/mate ]              && EDITOR="mate -w"
