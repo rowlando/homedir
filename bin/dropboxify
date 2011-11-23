@@ -11,7 +11,7 @@ for source in "$@"; do
         echo "File ${source_path} is not in ${HOME}, skipping."
         continue
     # Skip non-existant files
-    elif [ ! -e $source_path ]; then
+    elif [ ! -e "$source_path" ]; then
         echo "File ${source_path} does not exist, skipping."
         continue
     fi
@@ -19,13 +19,13 @@ for source in "$@"; do
     # Ensure the target directory exists
     # TODO: Make this clearer
     target_dir=`echo $source_path | sed -e 's_/[^/]*$__'`
-    mkdir -p ${DROPBOX_FOLDER}${target_dir#$HOME}
+    mkdir -p "${DROPBOX_FOLDER}${target_dir#$HOME}"
     
     # TODO: Get dropbox directory programmatically
-    mv $source_path ${DROPBOX_FOLDER}${source_path#$HOME}
+    mv "$source_path" "${DROPBOX_FOLDER}${source_path#$HOME}"
     
     # Link the original location back to Dropbox
-    ln -s ${DROPBOX_FOLDER}${source_path#$HOME} $source_path
+    ln -s "${DROPBOX_FOLDER}${source_path#$HOME}" "$source_path"
     
     echo "Moved ${source} to ${DROPBOX_FOLDER}"
 done
