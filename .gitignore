@@ -10,7 +10,7 @@
 .ssh
 
 .gem
-.vagrant
+.vagrant*
 
 bin/mate
 
