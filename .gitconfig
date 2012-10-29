@@ -18,3 +18,7 @@
 	st = status
 [core]
 	excludesfile = ~/etc/git/ignore
+[credential]
+	helper = osxkeychain
+[push]
+	default = tracking

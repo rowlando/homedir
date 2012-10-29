@@ -1,12 +1,13 @@
-# ~/etc/ports
+# ~/etc/brews
 
-    DEV=
+    DEV=Steves-MacBook-Pro
   MEDIA=Steves-iMac
 
 
 # essentials
 *               bash-completion
 *               cpanminus
+DEV             hub
 
 # p5-Media prereqs
 MEDIA           atomicparsley
@@ -15,8 +16,8 @@ MEDIA           aspell              --lang=en
 
 # Media-OCR stuff
 # MEDIA           dvdauthor           # Allows unmuxing of subs from DVDs
-# MEDIA           imagemagick         # Allows conversion of images for OCRing
-# MEDIA           gocr                # OCR library
+MEDIA           imagemagick         # Allows conversion of images for OCRing
+MEDIA           gocr                # OCR library
 # MEDIA           tesseract           # OCR library
-# MEDIA           transcode           # Tools for dicking around with DVDs!
+MEDIA           transcode           # Tools for dicking around with DVDs!
 # MEDIA           subtitleripper      # Does exactly what is says

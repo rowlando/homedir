@@ -8,3 +8,5 @@ RUBY_LOCAL_LIB="${HOME}/Library/Ruby"
 export GEM_HOME="${RUBY_LOCAL_LIB}"
 
 [ -x ${RUBY_LOCAL_LIB}/bin ] && PATH="${RUBY_LOCAL_LIB}/bin:${PATH}"
+
+eval "$(rbenv init -)"
