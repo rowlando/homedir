@@ -8,6 +8,8 @@
 *               bash-completion
 *               cpanminus
 DEV             hub
+DEV             rbenv
+DEV             ruby-build
 
 # p5-Media prereqs
 MEDIA           atomicparsley
