@@ -15,7 +15,12 @@
 	ci = commit
 	co = checkout
 	d  = diff
-	st = status
+	st = status -sb
+	amend = commit --amend
+	pr = pull --rebase
+	fu = checkout -f
+	hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
+	lp = log -p
 [core]
 	excludesfile = ~/etc/git/ignore
 [credential]
