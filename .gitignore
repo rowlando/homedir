@@ -9,10 +9,13 @@
 
 .ssh
 
+.rbenv
+.chef
 .gem
 .vagrant*
 
 bin/mate
+bin/HandBrakeCLI
 
 etc/bash/saved_history
 etc/less_history
