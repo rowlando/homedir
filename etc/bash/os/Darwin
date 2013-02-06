@@ -31,17 +31,6 @@ function pdtm {
     perldoc -t $1 | mate
 }
 
-# setup things installed via MacPorts
-if [ -x /opt/local/bin ]; then
-       PATH="/opt/local/bin:${PATH}"
-    MANPATH="/opt/local/man:${MANPATH}"
-    daemons='/opt/local/etc/LaunchDaemons'
-    
-    if [ -f /opt/local/etc/bash_completion ]; then
-        source_or_warn  /opt/local/etc/bash_completion
-    fi
-fi
-
 # setup things installed via homebrew
 if [ -f /usr/local/bin/brew ]; then
     if [ -f `brew --prefix`/etc/bash_completion ]; then

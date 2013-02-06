@@ -1,6 +1,0 @@
-Local ports repo for ports that aren't on MacPorts.
-
-Don't forget to add file:///Users/stevema/etc/port_repo/ports to
-/opt/local/etc/macports/sources.conf /above/ the rsync line.
-
-See http://guide.macports.org/chunked/development.local-repositories.html.
