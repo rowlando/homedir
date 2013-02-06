@@ -15,8 +15,7 @@
 .vagrant*
 
 soloistrc
-cookbooks/dmg
-cookbooks/pivotal_workstation
+cookbooks
 
 bin/mate
 bin/HandBrakeCLI
