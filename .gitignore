@@ -14,6 +14,10 @@
 .gem
 .vagrant*
 
+soloistrc
+cookbooks/dmg
+cookbooks/pivotal_workstation
+
 bin/mate
 bin/HandBrakeCLI
 
