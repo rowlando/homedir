@@ -17,9 +17,7 @@ MEDIA           aspell              --lang=en
 # MEDIA           handbrake
 
 # Media-OCR stuff
-# MEDIA           dvdauthor           # Allows unmuxing of subs from DVDs
+MEDIA           dvdauthor           # Allows unmuxing of subs from DVDs
 MEDIA           imagemagick         # Allows conversion of images for OCRing
+MEDIA           netpbm              # Allow gocr to work directly with PNG
 MEDIA           gocr                # OCR library
-# MEDIA           tesseract           # OCR library
-MEDIA           transcode           # Tools for dicking around with DVDs!
-# MEDIA           subtitleripper      # Does exactly what is says
