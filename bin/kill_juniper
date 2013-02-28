@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+sudo rm -rf /usr/local/juniper
+sudo rm -rf /Library/Frameworks/net.juniper.DSApplicationServices.framework
+sudo rm -rf /Library/Frameworks/net.juniper.DSCoreServices.framework
+sudo rm -rf /Library/Frameworks/net.juniper.DSNetworkDiagnostics.framework
+sudo rm -rf /Library/Internet\ Plug-Ins/net.juniper.DSSafariExtensions.plugin
+sudo rm -rf /Library/Widgets/Network\ Connect.wdgt
+sudo rm -rf ~/Library/Application\ Support/Juniper\ Networks
+sudo rm -rf ~/Library/Caches/net.juniper.NetworkConnect
+sudo rm -rf ~/Library/Logs/Juniper\ Networks
+sudo rm -rf ~/Library/Preferences/net.juniper.NetworkConnect.plist
