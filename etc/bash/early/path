@@ -6,6 +6,7 @@
 # HACK: Force rbenv path stuff in early so that old vagrant doesn't block new vagrant
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+[ -x /usr/bin ]                 && PATH="/usr/bin:${PATH}"
 [ -x /usr/local/bin ]           && PATH="/usr/local/bin:${PATH}"
 [ -x /usr/local/sbin ]          && PATH="/usr/local/sbin:${PATH}"
 [ -x ${HOME}/bin ]              && PATH="${HOME}/bin:${PATH}"
