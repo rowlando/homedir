@@ -3,7 +3,7 @@
 #
 # working with ruby
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# See ../early/path for rbenv init
 
 function gem {
     ~/.rbenv/shims/gem $*
