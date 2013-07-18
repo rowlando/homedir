@@ -1,21 +1,8 @@
-STORE=PowerMac
+STORE=Steves-iMac
   DEV=rockboard-lm
-MEDIA=PowerMac
+MEDIA=Steves-iMac
 
 # p5-Media deps
-MEDIA           Capture::Tiny
-MEDIA           Config::Std
-MEDIA           Data::Dumper::Concise
-MEDIA           HTTP::Lite
 MEDIA           IMDB::Film
-MEDIA           IO::All
-MEDIA           IPC::DirQueue
-MEDIA           Modern::Perl
-MEDIA           MooseX::Declare
-MEDIA           Net::Discident
-MEDIA           String::Approx
-MEDIA           Term::ReadKey
-MEDIA           Text::Aspell
-MEDIA           Text::Iconv
-MEDIA           Time::Elapsed
 MEDIA           WebService::MusicBrainz
+
