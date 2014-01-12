@@ -9,3 +9,5 @@ function gem {
     ~/.rbenv/shims/gem $*
     rbenv rehash
 }
+
+alias bx='bundle exec'
