@@ -8,6 +8,7 @@
 *               bash-completion
 *               cpanminus
 DEV             hub
+DEV             packer
 DEV             rbenv
 DEV             ruby-build
 
