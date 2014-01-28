@@ -1,8 +1,0 @@
-STORE=Steves-iMac
-  DEV=rockboard-lm
-MEDIA=Steves-iMac
-
-# p5-Media deps
-MEDIA           IMDB::Film
-MEDIA           WebService::MusicBrainz
-
