@@ -1,13 +1,6 @@
-[github]
-	user = SteveMarshall
-	token = REPLACE_ME_WITH_TOKEN
 [user]
 	email = steve@nascentguruism.com
 	name = Steve Marshall
-[color]
-	branch = auto
-	diff = auto
-	status = auto
 [merge]
 	tool = opendiff
 [alias]
@@ -26,4 +19,6 @@
 [credential]
 	helper = osxkeychain
 [push]
-	default = tracking
+	default = simple
+[color]
+	ui = true
