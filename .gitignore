@@ -9,6 +9,7 @@
 .irb_history
 .rdebug_hist
 .sqlite_history
+.config
 
 .ssh
 
@@ -34,7 +35,7 @@ Desktop/
 Development/
 Documents/
 Downloads/
-.dropbox/
+.dropbox*
 Dropbox/
 Encoding/
 LayerVault/
