@@ -8,6 +8,7 @@
 	ci = commit
 	co = checkout
 	d  = diff
+	wdiff = diff --color-words
 	st = status -sb
 	amend = commit --amend
 	pr = pull --rebase
@@ -22,3 +23,5 @@
 	default = simple
 [color]
 	ui = true
+[help]
+	autocorrect = 1
