@@ -3,11 +3,9 @@
 #
 # working with ruby
 
-# See ../early/path for rbenv init
-
-function gem {
-    ~/.rbenv/shims/gem $*
-    rbenv rehash
-}
+if [ -d /usr/local/share/chruby ]; then
+	source /usr/local/share/chruby/chruby.sh
+	source /usr/local/share/chruby/auto.sh
+fi
 
 alias bx='bundle exec'

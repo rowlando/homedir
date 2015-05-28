@@ -13,7 +13,7 @@
 
 .ssh
 
-.rbenv
+.rubies
 .berkshelf
 .chef
 .gem
