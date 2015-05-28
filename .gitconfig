@@ -25,3 +25,5 @@
 	ui = true
 [help]
 	autocorrect = 1
+[diff]
+	renames = true
