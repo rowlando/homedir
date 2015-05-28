@@ -2,11 +2,5 @@
 # -*- Mode: Bash; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 #
 # working with python
-# To get started, easy_install pip, then pip away!
 
-# location for personal modules not properly installed
-PYTHON_LOCAL_LIB="${HOME}/Library/Python"
-export PIP_INSTALL_OPTION="--prefix=$PYTHON_LOCAL_LIB"
-export PYTHONPATH="${PYTHON_LOCAL_LIB}/2.7/site-packages"
-
-[ -x ${PYTHON_LOCAL_LIB}/2.7/bin ] && PATH="${PYTHON_LOCAL_LIB}/2.7/bin:${PATH}"
+[ -x /usr/local/bin/virtualenvwrapper.sh ] && . /usr/local/bin/virtualenvwrapper.sh
