@@ -3,26 +3,12 @@
 # copy home directory files to the named machine
 
 host="${1}"
-is_yahoo="${2}"
 
 if [ -n "${host}" ]; then
     
     # base files
-    SKELETON="${HOME}/Development/Projects/homedir"
+    SKELETON="${HOME}/Development/Personal/homedir"
     KEYSFILE="${HOME}/.ssh/authorized_keys"
-    
-    # over-ride base files if a yahoo host
-    if [ -z "${is_yahoo}" ]; then
-        is_yahoo=`echo ${host} | grep yahoo.com`
-    fi
-    if [ -n "${is_yahoo}" ]; then
-        SKELETON="${HOME}/Development/Projects/homedir.yahoo"
-        KEYSFILE="${HOME}/.ssh/authorized_keys.yahoo"
-        DSAFILE="${HOME}/.ssh/id_dsa.yahoo"
-        DSAPFILE="${HOME}/.ssh/id_dsa.yahoo.pub"
-        RSAFILE="${HOME}/.ssh/id_rsa.yahoo"
-        RSAPFILE="${HOME}/.ssh/id_rsa.yahoo.pub"
-    fi
     
     # make sure the skeleton is up-to-date
     cd ${SKELETON} 
