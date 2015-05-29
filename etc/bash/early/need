@@ -12,10 +12,6 @@ function need {
     
     if [ 0 = ${have} ]; then
         print "${bold}${red}${file} is not installed${reset}"
-    else
-        # perform what was passed as stdin (BEWARE: this is not quite normal
-        # bash syntax, so semi-colons are almost certainly required)
-        eval `cat`
     fi
     
     return ${have}
