@@ -4,7 +4,7 @@
 # echo the last n parts of the current working directory (used in prompts)
 
 function pwdn {
-    MAX_LEN=10  # maximum length of directory to echo (otherwise trimmed)
+    MAX_LEN=11  # maximum length of directory to echo (otherwise trimmed)
     
     depth=$1
     pwd | perl -e "

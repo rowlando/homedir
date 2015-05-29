@@ -4,7 +4,7 @@
 # set the prompt (should be done as late as possible)
 
 # most basic prompt
-current_path="${pbold}\$(pwdn 2)${preset}"
+current_path="\$(pwdn 2)"
 
 PS1="${hostname} ${pyellow}${current_path}${preset})\$"
 
