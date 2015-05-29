@@ -5,30 +5,38 @@
 host="${1}"
 
 if [ -n "${host}" ]; then
-    
-    # base files
+  # base files
     SKELETON="${HOME}/Development/Personal/homedir"
     KEYSFILE="${HOME}/.ssh/authorized_keys"
-    
+
     # make sure the skeleton is up-to-date
-    cd ${SKELETON} 
-    git pull
-    
+    pushd ${SKELETON}
+    git pull ;
+    popd
+
     # first transfer the keys file
-    ssh ${host} "mkdir -p .ssh"
-    rsync -v ${KEYSFILE} ${host}:.ssh/authorized_keys
-    if [ -n "${DSAFILE}" ]; then
-        rsync -v ${DSAFILE} ${host}:.ssh/id_dsa
-        rsync -v ${DSAPFILE} ${host}:.ssh/id_dsa.pub
-        rsync -v ${RSAFILE} ${host}:.ssh/id_rsa
-        rsync -v ${RSAPFILE} ${host}:.ssh/id_rsa.pub
+    if [ ! "${host}" == vagrant ]; then
+      ssh ${host} "mkdir -p .ssh"
+      rsync -v ${KEYSFILE} ${host}:.ssh/authorized_keys
+      if [ -n "${DSAFILE}" ]; then
+          rsync -v ${DSAFILE} ${host}:.ssh/id_dsa
+          rsync -v ${DSAPFILE} ${host}:.ssh/id_dsa.pub
+          rsync -v ${RSAFILE} ${host}:.ssh/id_rsa
+          rsync -v ${RSAPFILE} ${host}:.ssh/id_rsa.pub
+      fi
     fi
-    
+
     # then copy everything else (this has the side effect
     # of illustrating whether ssh now works passwordless)
-    rsync -aHvP . ${host}:.
 
-else
+    if [ "${host}" == vagrant ]; then
+      vagrant ssh-config > .vagrant-ssh-config
+      rsync --rsh="ssh -F .vagrant-ssh-config" -aHvP ${SKELETON}/ default:.
+      rm -rf .vagrant-ssh-config
+    else
+      rsync -aHvP ${SKELETON}/ ${host}:.
+    fi
+  else
     echo "Usage: home <host>"
     exit 1
 fi
