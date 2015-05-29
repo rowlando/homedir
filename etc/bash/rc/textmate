@@ -1,6 +1,7 @@
 # ~/etc/bash/rc/textmate
 # -*- Mode: Bash; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 
-have_textmate=`need mate`
-[ have_textmate ]              && export VISUAL="mate -w"
-[ have_textmate ]              && export EDITOR="mate -w"
+if [ -x ${HOME}/bin/mate ]; then
+  export EDITOR="mate -w"
+  export VISUAL="mate -w"
+fi
