@@ -4,9 +4,7 @@
 homebrew_git_completions=/usr/local/etc/bash_completion.d/git-completion.bash
 macos_git_completions=/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
-if [ -f $homebrew_git_completions ]; then
-  . $homebrew_git_completions
-elif [ -f $macos_git_completions ]; then
+if [ ! -f $homebrew_git_completions ] && [ -f $macos_git_completions ]; then
   .  $macos_git_completions
 fi
 
