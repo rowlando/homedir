@@ -19,6 +19,8 @@
 .gem
 .vagrant*
 .virtualenvs
+.aws
+.gnupg
 
 soloistrc
 cookbooks
