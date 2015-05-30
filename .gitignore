@@ -18,6 +18,7 @@
 .chef
 .gem
 .vagrant*
+.virtualenvs
 
 soloistrc
 cookbooks
