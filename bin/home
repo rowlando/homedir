@@ -32,10 +32,13 @@ if [ -n "${host}" ]; then
     if [ "${host}" == vagrant ]; then
       vagrant ssh-config > .vagrant-ssh-config
       rsync --rsh="ssh -F .vagrant-ssh-config" -aHvP ${SKELETON}/ default:.
+      exit_code=$?
       rm -rf .vagrant-ssh-config
     else
       rsync -aHvP ${SKELETON}/ ${host}:.
+      exit_code=$?
     fi
+    exit $exit_code
   else
     echo "Usage: home <host>"
     exit 1
