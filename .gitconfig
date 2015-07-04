@@ -32,3 +32,5 @@
 	autocorrect = 20
 [diff]
 	renames = true
+[rebase]
+  autosquash = true
