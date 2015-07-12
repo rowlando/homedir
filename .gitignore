@@ -7,16 +7,21 @@
 .lesshst
 .viminfo
 .irb_history
+.ipython
 .rdebug_hist
+.byebug_hist
+.psql_history
 .sqlite_history
 .config
 
 .ssh
 
 .rubies
+.bundler
 .berkshelf
 .chef
 .gem
+.boot2docker
 .vagrant*
 .virtualenvs
 .aws
