@@ -21,7 +21,7 @@ GIT_STATUS_FORMATTER='git_status_formatter'
      PROMPT_USERCHAR='$'
          PROMPT_HOST='${hostname}'
        PROMPT_WINDOW='%ccscr${WINDOW}%cn '
-        PS1_TEMPLATE='([window][user][host] %cy[pwd 2]%b%cc[git]%cn)[%%] '
+        PS1_TEMPLATE='([window][user][host] %cy[pwd 2]%b%cg[git]%cn)[%%] '
   # PS1_TITLE_TEMPLATE='$(pwdn 2)'
 
 declare -a git_status
