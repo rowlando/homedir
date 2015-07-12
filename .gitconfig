@@ -15,10 +15,6 @@
 	fu = checkout -f
 	hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
 	lp = log -p
-  tadd = add
-  tpull = pull
-  tpush = push
-  tstatus = status
   tst = st
 [core]
 	excludesfile = ~/etc/git/ignore
