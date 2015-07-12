@@ -4,9 +4,9 @@
 # echo the last n parts of the current working directory (used in prompts)
 
 function pwdn {
-    MAX_LEN=11  # maximum length of directory to echo (otherwise trimmed)
-    
-    depth=$1
+    local maximum_word_length=${PWDN_MAX_WORD:=10}
+    local               depth=$1
+
     pwd | perl -e "
         \$_ = <>;
         if ( m{^ / $}x ) {
@@ -20,10 +20,10 @@ function pwdn {
             foreach ( 1 .. $depth ) {
                 if ( @dirs ) {
                     my \$x    = pop @dirs;
-                    my \$half = int( ( $MAX_LEN - 1 ) / 2 );
-                    
-                    # if this directory name is greater than MAX_LEN, 
-                    # truncate the middle (replaced with an ellipsis)
+                    my \$half = int( ( $maximum_word_length - 1 ) / 2 );
+
+                    # if this directory name is too large, truncate
+                    # the middle and replace it with an ellipsis
                     \$x   =~ m{^ (.{0,\$half}) (.*?) (.{0,\$half}) $}x;
                     \$x    = \"\$1…\$3\"  if ( length( \$2 ) > 2 );
                     push( @return, \$x );
