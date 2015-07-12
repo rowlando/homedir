@@ -3,4 +3,6 @@
 #
 # working with python
 
-[ -x /usr/local/bin/virtualenvwrapper.sh ] && . /usr/local/bin/virtualenvwrapper.sh
+[ -x /usr/local/bin/virtualenvwrapper.sh ] && \
+  python -c 'import virtualenvwrapper' 2>/dev/null 1>/dev/null && \
+  . /usr/local/bin/virtualenvwrapper.sh
