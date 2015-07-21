@@ -34,6 +34,7 @@ bin/mate
 bin/HandBrakeCLI
 
 etc/bash/saved_history
+etc/bash/secrets
 etc/less_history
 
 var/encoder.pid

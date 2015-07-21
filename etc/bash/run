@@ -42,7 +42,8 @@ do
 done
 
 
-# prompt comes last
+# prompt and secrets come last
+source_if_exists ~/etc/bash/secrets
 source_or_warn ~/etc/bash/prompt
 export PS1
 export PATH
