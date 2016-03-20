@@ -13,7 +13,7 @@
 	amend = commit --amend
 	pr = pull --rebase
 	fu = checkout -f
-	hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
+	hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s (%an)'
 	lp = log -p
   tst = st
 [core]
