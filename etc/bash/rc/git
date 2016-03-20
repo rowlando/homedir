@@ -8,7 +8,9 @@ if [ ! -f $homebrew_git_completions ] && [ -f $macos_git_completions ]; then
   .  $macos_git_completions
 fi
 
-if which hub > /dev/null; then alias git=hub; fi
+if command -v hub > /dev/null; then
+  alias git=hub
+fi
 
 alias gi=git
 alias gti=git
