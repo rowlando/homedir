@@ -1,8 +1,0 @@
-# crontab.XXX
-# -*- Mode: Apache; tab-width: 3; indent-tabs-mode: nil -*-
- 
-  MAILTO=steve@nascentguruism.com
-    PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-    HOST=XXX
- 
-#mn   hr    dom   mon   dow   cmd
