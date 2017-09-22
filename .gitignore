@@ -16,6 +16,8 @@
 .psql_history
 .sqlite_history
 .config
+.rnd
+.skipbuddy
 
 .ssh
 
