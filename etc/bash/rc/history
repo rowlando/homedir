@@ -17,4 +17,4 @@ function prompt_command {
     fi
 }
 
-PROMPT_COMMAND="$PROMPT_COMMAND; prompt_command"
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }prompt_command"
