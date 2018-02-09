@@ -1,5 +1,0 @@
-#! /usr/bin/env bash
-
-ln -s Current ~/Applications/Adium.app/Contents/Frameworks/libpurple.framework/Versions/0.10.0
-ln -s Current ~/Applications/Adium.app/Contents/Frameworks/libglib.framework/Versions/2.0.0
-ln -s Current ~/Applications/Adium.app/Contents/Frameworks/libintl.framework/Versions/8
