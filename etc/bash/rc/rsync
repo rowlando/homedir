@@ -14,7 +14,3 @@ rs_s3_options="--size-only --inplace"
 # disk-to-disk synchronisation
 alias     rs="rsync -aHvP ${rs_ignore}"
 alias    rsd="rs --delete"
-
-# disk-to-s3 synchronisation (when mounted via JungleDisk)
-alias    rs3="rsync -rptgvP ${rs_s3_options} ${rs_ignore}"
-alias   rs3d="rs3 --delete"
