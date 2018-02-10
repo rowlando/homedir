@@ -1,12 +1,12 @@
 # ~/etc/screen/common
-# 
+#
 # screen settings used in all sessions
 
 # never use ^A as the command key -- it clashes with 'start of line', and
-# has caused me to kill windows so many times when doing ^A^K to delete 
-# the current line in the shell or micro-emacs/pico like editors; ^Z has 
+# has caused me to kill windows so many times when doing ^A^K to delete
+# the current line in the shell or micro-emacs/pico like editors; ^Z has
 # few side-effects (other than occasionally accidentally pausing a program)
-escape              ^Zz      
+escape              ^Zz
 
 autodetach          on
 defutf8             on
