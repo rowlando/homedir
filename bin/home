@@ -3,41 +3,33 @@
 # copy home directory files to the named machine
 
 host="${1}"
+SKELETON="${HOME}/Development/Personal/homedir"
 
 if [ -n "${host}" ]; then
-  # base files
-    SKELETON="${HOME}/Development/Personal/homedir"
-    KEYSFILE="${HOME}/.ssh/authorized_keys"
-
     # make sure the skeleton is up-to-date
-    pushd ${SKELETON}
-    git pull ;
-    popd
-
-    # first transfer the keys file
-    if [ ! "${host}" == vagrant ]; then
-      ssh ${host} "mkdir -p .ssh"
-      rsync -v ${KEYSFILE} ${host}:.ssh/authorized_keys
-      if [ -n "${DSAFILE}" ]; then
-          rsync -v ${DSAFILE} ${host}:.ssh/id_dsa
-          rsync -v ${DSAPFILE} ${host}:.ssh/id_dsa.pub
-          rsync -v ${RSAFILE} ${host}:.ssh/id_rsa
-          rsync -v ${RSAPFILE} ${host}:.ssh/id_rsa.pub
-      fi
+    if [ ! -d "${SKELETON}" ]; then
+      mkdir -p $(dirname $SKELETON)
+      git clone git@github.com:SteveMarshall/homedir.git ${SKELETON}
+    else
+      pushd ${SKELETON} >/dev/null
+      git pull
+      popd >/dev/null
     fi
-
-    # then copy everything else (this has the side effect
-    # of illustrating whether ssh now works passwordless)
 
     if [ "${host}" == vagrant ]; then
+      # Override host and remote shell for Vagrant
+      host=default
       vagrant ssh-config > .vagrant-ssh-config
-      rsync --rsh="ssh -F .vagrant-ssh-config" -aHvP ${SKELETON}/ default:.
-      exit_code=$?
+      rsh_override='--rsh="ssh -F .vagrant-ssh-config"'
       rm -rf .vagrant-ssh-config
     else
-      rsync -aHvP ${SKELETON}/ ${host}:.
-      exit_code=$?
+      # Pre-load public key for non-vagrant hosts
+      cat ~/.ssh/id_rsa.pub | ssh $host "mkdir -p .ssh && cat >> .ssh/authorized_keys"
     fi
+
+    # Copy files to the remote host
+    rsync ${rsh_override} -aHvP ${SKELETON}/ ${host}:.
+    exit_code=$?
     exit $exit_code
   else
     echo "Usage: home <host>"
