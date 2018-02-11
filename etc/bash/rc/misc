@@ -8,8 +8,5 @@ shopt -s cdspell
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
-export EXINIT="set sh=/bin/sh sw=4 ai redraw report=2"
-
 # Force everything to UTF-8 en_GB
 export LC_ALL='en_GB.UTF-8'
-

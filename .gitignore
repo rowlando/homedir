@@ -30,6 +30,7 @@
 .vagrant*
 .virtualenvs
 .aws
+.config.yaml
 .gnupg
 
 soloistrc
@@ -41,6 +42,7 @@ bin/HandBrakeCLI
 etc/bash/saved_history
 etc/bash/secrets
 etc/less_history
+etc/macos/
 
 var/encoder.pid
 
@@ -52,7 +54,6 @@ Downloads/
 .dropbox*
 Dropbox/
 Encoding/
-LayerVault/
 Library/
 Media/
 Movies/
@@ -63,4 +64,4 @@ Public/
 Sites/
 Sources/
 Virtual Machines/
-Work Dropbox
+VirtualBox VMs/
