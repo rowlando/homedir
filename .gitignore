@@ -1,15 +1,24 @@
 .bash_sessions
+.bash_history
 
 .CFUserTextEncoding
 .com.apple.timemachine.supported
 .cpan*
 .cups
+.dbshell
 .dvdcss
 .macports
 .lesshst
 .viminfo
+.wget-hsts
 .irb_history
 .ipython
+.mongorc.js
+.netrc
+.node_repl_history
+.pry_history
+.psql_history
+.sqlite_history
 .rdebug_hist
 .byebug_hist
 .lldb
@@ -18,9 +27,11 @@
 .config
 .rnd
 .skipbuddy
+.v8flags*
 
 .ssh
 
+.babel.json
 .rubies
 .bundler
 .berkshelf
@@ -32,9 +43,13 @@
 .aws
 .config.yaml
 .gnupg
+.yarnrc
+.z
 
+redc.sh
 soloistrc
 cookbooks
+Solarized Dark.itermcolors
 
 bin/mate
 bin/HandBrakeCLI
@@ -47,15 +62,17 @@ etc/macos/
 var/encoder.pid
 
 Applications/
+Apps/
+Creative Cloud Files/
 Desktop/
 Development/
 Documents/
 Downloads/
 .dropbox*
 Dropbox/
-Encoding/
+go/
+Learning/
 Library/
-Media/
 Movies/
 Music/
 Pictures/
