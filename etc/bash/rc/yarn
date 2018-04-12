@@ -1,0 +1,6 @@
+# ~/etc/bash/rc/yarn
+# -*- Mode: Bash; tab-width: 4; indent-tabs-mode: nil; -*-
+#
+# Setup path to yarn
+
+export PATH="$HOME/.yarn/bin:$PATH"

@@ -1,0 +1,5 @@
+# ~/etc/bash/rc/golang
+# -*- Mode: Bash; tab-width: 4; indent-tabs-mode: nil; -*-
+#
+# Setup go path
+export GOPATH=$HOME/go

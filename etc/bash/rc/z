@@ -1,0 +1,5 @@
+# ~/etc/bash/rc/z
+# -*- Mode: Bash; tab-width: 4; indent-tabs-mode: nil; -*-
+#
+# Setup z - https://github.com/rupa/z
+. $HOME/Apps/z/z.sh

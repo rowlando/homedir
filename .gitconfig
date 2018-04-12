@@ -1,8 +1,10 @@
 [user]
-	email = steve@stevemarshall.com
-	name = Steve Marshall
+	name = Nick Rowlands
+	email = nick@rowlando.com
 [merge]
-	tool = opendiff
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
 [alias]
 	br = branch
 	ci = commit
@@ -18,6 +20,7 @@
   tst = st
 [core]
 	excludesfile = ~/etc/git/ignore
+	autocrlf = input
 [credential]
 	helper = osxkeychain
 [push]
@@ -45,3 +48,9 @@
   insteadOf = "gist:"
 [commit]
 	gpgsign = true
+[log]
+	date = relative
+[format]
+	pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
+
+	

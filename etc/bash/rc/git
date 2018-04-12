@@ -14,3 +14,7 @@ fi
 
 alias gi=git
 alias gti=git
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
