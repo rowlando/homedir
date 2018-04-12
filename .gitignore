@@ -1,6 +1,26 @@
 .bash_sessions
 .bash_history
 
+.bundle
+.cache
+.composer
+.docker
+.heroku
+.ivy2
+.jspm
+.local
+.node-gyp
+.npm
+.nvm
+.oracle_jre_usage
+.rbenv
+.sbt
+.standard-cache
+.travis
+.tsuru
+.vnc
+.vscode
+
 .CFUserTextEncoding
 .com.apple.timemachine.supported
 .cpan*
@@ -80,5 +100,6 @@ Projects/
 Public/
 Sites/
 Sources/
+src/
 Virtual Machines/
 VirtualBox VMs/
