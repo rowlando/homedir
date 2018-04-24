@@ -5,9 +5,11 @@
 .cache
 .composer
 .docker
+.electron
 .heroku
 .ivy2
 .jspm
+.kube
 .local
 .node-gyp
 .npm
@@ -15,6 +17,7 @@
 .oracle_jre_usage
 .rbenv
 .sbt
+.serverless
 .standard-cache
 .travis
 .tsuru
@@ -38,6 +41,7 @@
 .node_repl_history
 .pry_history
 .psql_history
+.serverlessrc
 .sqlite_history
 .rdebug_hist
 .byebug_hist
@@ -91,6 +95,7 @@ Downloads/
 .dropbox*
 Dropbox/
 go/
+Kubernetes/
 Learning/
 Library/
 Movies/
@@ -101,5 +106,6 @@ Public/
 Sites/
 Sources/
 src/
+vagrant/
 Virtual Machines/
 VirtualBox VMs/
